@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, target-densitydpi=device-dpi" />
+	<title>Sign Up - NexTransfer</title>
+	<meta name="description" content="NexTransfer">
+	<meta name="author" content="Woojae Kim/ woojae.kim@nextransfer.net">
+	<meta name="copyright" content="NexTransfer">
+	<meta name="keyword" content="money transfer,transfer,currency ">
+
+	<!--[if lt IE 9]>
+	<script src="js/css3-mediaqueries.js"></script>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" type="text/css" href="../../css/common.css">
+	<link rel="stylesheet" type="text/css" href="../../css/cs-select.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/cs-skin-elastic.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/bxslider/jquery.bxslider.css"/>
+	<link rel="stylesheet" type="text/css" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<link rel="stylesheet" type="text/css" href="../../css/normalize.css" />
+	<link rel="stylesheet" type="text/css" href="../../css/style.css">
+	<script src="../../js/modernizr-2.5.3.min.js"></script>
+	<script src="../../js/jquery-1.8.3.min.js"></script>
+	<script src="../../js/jquery.bxslider.min.js"></script>
+	<script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+	<script src="../../js/common.js"></script>
+</head>
+
+<body>
+	<header>
+		<div class="header_wrap">
+			<div class="logo"><a href="../../index.html"><img src="../../img/common/logo_300_blk.png" alt="NexTransfer" ></a></div>
+			<div class="gnb">
+				<ul>
+					<li><a href="how_it_works.html">HOW IT WORKS</a></li>
+					<li><a href="about_us.html">ABOUT US</a></li>
+				</ul>
+			</div>
+			<div class="lnb">
+				<ul>
+					<li><a href="account/log_in">LOG IN</a></li>
+					<li><a href="account/sign_up" class="button">SIGN UP</a></li>
+				</ul>
+			</div>
+		</div>
+		<div id="nav-icon1">
+		  <span></span>
+		  <span></span>
+		  <span></span>
+		</div>
+		<nav>
+			<ul>
+				<li><a href="how_it_works.html">How It Works</a></li>
+				<li><a href="about_us.html">About Us</a></li>
+				<li><a href="">Contact Us</a></li>
+				<li><a href="mypage.html">My Page</a></li>
+				<li><a href="account/log_in">Log In</a></li>
+				<li><a href="account/sign_up">Sign Up</a></li>
+			</ul>
+		</nav>
+	</header>
+
+	<div id="container" class="sign_up">
+		<div class="title">
+			<h2>SIGN UP</h2>
+			<p>Welcome to the next generation of money transfer.<br>Creating a new account takes less than 1 minutes.<br>Let’s get started.</p>
+		</div>
+		<section class="content bgcolor-4">
+			<!-- <span class="input input--kuro">
+				<input class="input__field input__field--kuro" type="text" id="firstname" placeholder="Michael" autofocus/>
+				<label class="input__label input__label--kuro" for="firstname">
+					<span class="input__label-content input__label-content--kuro">First Name</span>
+				</label>
+			</span>
+			<span class="input input--kuro">
+				<input class="input__field input__field--kuro" type="text" id="lastname" placeholder="Jordan" />
+				<label class="input__label input__label--kuro" for="lastname">
+					<span class="input__label-content input__label-content--kuro">Last Name</span>
+				</label>
+			</span> -->
+			<span class="input input--kuro">
+				<input class="input__field input__field--kuro" type="text" id="email" placeholder="id@example.com" autofocus/>
+				<label class="input__label input__label--kuro" for="email">
+					<span class="input__label-content input__label-content--kuro">E-MAIL</span>
+				</label>
+			</span>
+			<span class="input input--kuro">
+				<input class="input__field input__field--kuro" type="password" id="pw" placeholder="password"/>
+				<label class="input__label input__label--kuro" for="pw">
+					<span class="input__label-content input__label-content--kuro">PASSWORD</span>
+				</label>
+			</span>
+			<span class="input input--kuro">
+				<a class="button sign_up" href="create_profile.html">CREAT ACCOUNT</a>
+			</span>
+			<span class="input"><a href="../log_in">or log in with your existing account</a></span>
+			<span class="input">or sign up with</span>
+			<span class="input">
+				<a class="button fb" tabindex=1 >facebook</a>
+				<a class="button google" tabindex=1 >google</a>
+			</span>
+			<span class="input">
+			</span>
+
+		</section>
+		
+	</div><!-- //container about us -->
+	<script src="../../js/classie.js"></script>
+		<script>
+			(function() {
+				// trim polyfill : https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/Trim
+				if (!String.prototype.trim) {
+					(function() {
+						// Make sure we trim BOM and NBSP
+						var rtrim = /^[\s\uFEFF\xA0]+|[\s\uFEFF\xA0]+$/g;
+						String.prototype.trim = function() {
+							return this.replace(rtrim, '');
+						};
+					})();
+				}
+
+				[].slice.call( document.querySelectorAll( 'input.input__field' ) ).forEach( function( inputEl ) {
+					// in case the input is already filled..
+					if( inputEl.value.trim() !== '' ) {
+						classie.add( inputEl.parentNode, 'input--filled' );
+					}
+
+					// events:
+					inputEl.addEventListener( 'focus', onInputFocus );
+					inputEl.addEventListener( 'blur', onInputBlur );
+				} );
+
+				function onInputFocus( ev ) {
+					classie.add( ev.target.parentNode, 'input--filled' );
+				}
+
+				function onInputBlur( ev ) {
+					if( ev.target.value.trim() === '' ) {
+						classie.remove( ev.target.parentNode, 'input--filled' );
+					}
+				}
+			})();
+		</script>
+	<footer>
+		<div class="wrap">
+			<ul class="col">
+			<li><div class="logo"><a href="../../index.html"><img src="../../img/common/logo_300.png" alt="NexTransfer" width="150"></a></div></li>
+			<li class="contact">
+				<ul>
+					<li><a href="mailto:info@nextransfer.net">info@nextransfer.com</a><br>070-0000-0000</li>
+					<li>&nbsp;</li>
+					<li>Address</li>
+				</ul>
+			</li>
+			<li class="sns">
+				<ul>
+					<li><a href="#">Facebook</a></li>
+					<li><a href="#">Google</a></li>
+					<li><a href="#">Twitter</a></li>
+					<li><a href="#">Linkedin</a></li>
+				</ul>
+			</li>
+			<li class="sitemap">
+				<ul>
+					<li><a href="about_us.html">About Us</a></li>
+					<li><a href="how_it_works.html">How It Works</a></li>
+					<li><a href="">Contact Us</a></li>
+				</ul>
+			</li>
+			<li><a href="mailto:info@nextransfer.net" class="button w100p">Join Our Newsletter</a></li>
+		</ul>	
+		<div class="copyright">2015 © NexTransfer Copy rights all reserved.</div>
+		</div>
+	</footer>
+	<div class="pageTop">
+	    <a href="#" class="scrollToTop" title="화면 최상단으로 이동하기"><img src="../../img/common/m_totop_btn_g.png" alt="맨위로"></a>
+	</div>
+</body>
+</html>
